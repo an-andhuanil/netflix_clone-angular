@@ -1,0 +1,31 @@
+<section class="banner-slider">
+    <div class="contain-fluid">
+        <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2500"
+                *ngFor="let b of bannerResult;let i=index" [ngClass]="{active:i===1}">
+                <div  style="background-image: url('https://image.tmdb.org/t/p/original/{{ b.backdrop_path }}');height: 800px;color: white;background-size: cover;">
+                    <div class="content_home gradient">
+                        <h2 class="title_home">{{b.original_title}}</h2>
+                        <div>
+                            <button class="button1"><img src="./assets/icons/play-button.png" style="height: 25px;width: 25px;"> Play</button>
+                            <button class="button"><img src="./assets/icons/more.svg" style="height: 32px;width: 32px;"> More Info</button>
+                        </div>
+                        <p class="home_overview">{{b.overview | shorten:95}}</p>
+                    </div>
+                    <div class="gradient"></div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
