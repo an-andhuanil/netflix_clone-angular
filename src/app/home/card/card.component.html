@@ -1,0 +1,16 @@
+
+<div class="container1">
+    <p class="font-semibold card_p">{{title}}</p>
+    <div>
+        <div #swiperContainer class="swiper-container">
+            <div class="swiper-wrapper">
+                <ng-container *ngFor="let movie of content" >
+                    <div  class="swiper-slide relative" style="background-image: url('https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}');height: 200px;color: white;background-size: cover;">
+                        <!-- <img  src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="" /> -->
+                       <span style="color: #fff;">{{ movie.original_title }}</span> 
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

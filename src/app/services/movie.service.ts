@@ -18,4 +18,8 @@ export class MovieService {
   sliderMovies (): Observable<Movies> {
     return this.http.get<Movies>(`${this.baseURL}/movie/now_playing?api_key=${this.apikey}`);
   }
+
+  getTopRated(): Observable<Movies>{
+    return this.http.get<Movies>(`${this.baseURL}/movie/top_rated?api_key=${this.apikey}`)
+  }
 }

@@ -8,6 +8,7 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { ShortenPipe } from './shared/shorten.pipe';
 import { SliderComponent } from './home/slider/slider.component';
+import { CardComponent } from './home/card/card.component';
 
 
 
@@ -18,7 +19,8 @@ import { SliderComponent } from './home/slider/slider.component';
     NavBarComponent,
     HomeComponent,
     ShortenPipe,
-    SliderComponent
+    SliderComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
