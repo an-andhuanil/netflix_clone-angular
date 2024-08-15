@@ -19,7 +19,29 @@ export class MovieService {
     return this.http.get<Movies>(`${this.baseURL}/movie/now_playing?api_key=${this.apikey}`);
   }
 
-  getTopRated(): Observable<Movies>{
-    return this.http.get<Movies>(`${this.baseURL}/movie/top_rated?api_key=${this.apikey}`)
+  getTrendingMovies(): Observable<Movies>{
+    return this.http.get<Movies>(`${this.baseURL}/trending/movie/week?api_key=${this.apikey}`);
   }
+
+  getActionMovies(): Observable<Movies>{
+    return this.http.get<Movies>(`${this.baseURL}/discover/movie?api_key=${this.apikey}&with_genres=28`);
+  }
+
+  getComedyMovies(): Observable<Movies>{
+    return this.http.get<Movies>(`${this.baseURL}/discover/movie?api_key=${this.apikey}&with_genres=35`);
+  }
+
+  getAdventureMovies(): Observable<Movies>{
+    return this.http.get<Movies>(`${this.baseURL}/discover/movie?api_key=${this.apikey}&with_genres=12`);
+  }
+
+  getScienceFictionMovies(): Observable<Movies>{
+    return this.http.get<Movies>(`${this.baseURL}/discover/movie?api_key=${this.apikey}&with_genres=878`);
+  }
+
+  getDocumentaries(): Observable<Movies>{
+    return this.http.get<Movies>(`${this.baseURL}/discover/movie?api_key=${this.apikey}&with_genres=99`);
+  }
+
+  
 }
