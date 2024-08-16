@@ -79,9 +79,9 @@ export class CardComponent implements OnInit,AfterViewInit {
     })
   }
 
-  // setHoverMovie(movie: IVideoContent) {
-  //   this.selectedContent = movie.title ?? movie.name;
-  // }
+  setHoverMovie(movie: Movie) {
+    this.selectedContent = movie.title ?? movie.name;
+  }
 
   clearHoverMovie() {
     this.selectedContent = null;

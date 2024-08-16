@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ShortenPipe } from './shared/shorten.pipe';
 import { SliderComponent } from './home/slider/slider.component';
 import { CardComponent } from './home/card/card.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -25,7 +26,8 @@ import { CardComponent } from './home/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   exports:[
     ShortenPipe
