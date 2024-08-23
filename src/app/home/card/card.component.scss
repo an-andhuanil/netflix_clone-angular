@@ -5,28 +5,28 @@
     cursor: pointer;
   }
   
-  // .desc {
-  //   transition: all 300ms ease-in-out;
-  //   background-color: #181818c4;
-  //   height: 170px;
-  //   position: absolute;
-  //   width: 100%;
-  //   bottom: 0;
-  // }
+  .desc {
+    transition: all 300ms ease-in-out;
+    background-color: #181818c4;
+    height: 170px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
   
-  // .desc:hover {
-  //   transition: all 300ms ease-in-out;
-  // }
+  .desc:hover {
+    transition: all 300ms ease-in-out;
+  }
   
-  // .desc.tv {
-  //   height: 60px;
-  // }
+  .desc.tv {
+    height: 60px;
+  }
   
   .swiper-slide img {
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    width: 400px !important;
-    height: 250px !important;
+    width: 350px !important;
+    height: 200px !important;
     object-fit: cover;
   }
   
@@ -66,11 +66,18 @@
   
 
   .card_p{
+    display: inline-block;
     color: #e5e5e5;
-    font-size: 40px;
-    padding-left: 15px;
+    font-size: 1.4vw;
     font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
     font-weight: 500;
+    line-height: 1.25vw;
+    vertical-align:bottom;
   }
 
-  
+  .slider {
+    margin: 0;
+    padding: 0 4%;
+    position: relative;
+    touch-action: pan-y;
+}

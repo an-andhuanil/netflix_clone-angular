@@ -10,6 +10,7 @@ import { ShortenPipe } from './shared/shorten.pipe';
 import { SliderComponent } from './home/slider/slider.component';
 import { CardComponent } from './home/card/card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MovieService } from './services/movie.service';
 
 
 
@@ -32,7 +33,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   exports:[
     ShortenPipe
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

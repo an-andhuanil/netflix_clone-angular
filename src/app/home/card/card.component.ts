@@ -81,6 +81,7 @@ export class CardComponent implements OnInit,AfterViewInit {
 
   setHoverMovie(movie: Movie) {
     this.selectedContent = movie.title ?? movie.name;
+    console.log(this.selectedContent)
   }
 
   clearHoverMovie() {
