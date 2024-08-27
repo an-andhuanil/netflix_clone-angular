@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MovieService } from './services/movie.service';
+import { CoreModule } from './core.module';
 
 
 
@@ -19,11 +19,11 @@ import { MovieService } from './services/movie.service';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    CoreModule
   ],
   exports:[
     
   ],
-  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

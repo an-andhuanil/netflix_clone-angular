@@ -7,13 +7,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShortenPipe } from '../shared/shorten.pipe';
 import { SharedModule } from '../shared/shared.module';
 import { MovieService } from '../services/movie.service';
+import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
   {
-    path: '',
-  component: HomeComponent,
-  },
+    path:'',
+    component : HomeComponent,
+    canActivate : [AuthGuard],
+    children : [
+      { path: '', component: HomeComponent },
+    ]
+  }
 ];
+
 
 @NgModule({
   declarations: [
