@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Subject, tap, throwError } from 'rxjs';
 import { User } from './user.model';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { environment } from './env';
 
 export interface AuthResponseData{
   kindc : string;
