@@ -1,6 +1,157 @@
-<p style="color: black;">login works!</p>
-<form [formGroup]="userForm">
-    <input type="text" id="username" name="username" placeholder="username" formControlName="userName">
-    <input type="text" name="" id="" formControlName="passWord">
-    <button type="submit" (click)="onSubmit()">Submit</button>
-</form>
+<!-- 
+
+
+-->
+<div style="background-color: #141414;height: 1000px;">
+<div style="display: flex;flex-direction: column;align-items: center;justify-content: center;background-image: linear-gradient(180deg,transparent,rgb(37,37,37,.61),#111),
+ url('https://wallpapercat.com/w/full/1/b/8/116492-2560x1488-desktop-hd-netflix-background-image.jpg');height: 800px;width: 100%;;color: white;background-size: cover;">
+
+<div class="col-md-7" style="display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;">
+    <a class="navbar-brand" routerLink="home"><img src="./assets/logo/logo.png" alt="logo" style="width: 184px;height: 62px;"></a>
+</div>
+    <div class="card">
+            <div style="padding: 48px 68px;">
+                <div class="col-md-12">
+                    <h2 style="margin-block-start: 0;
+                    margin-block-end: 0;
+                    margin: 0;
+                    padding: 0;
+                    color: rgb(255, 255, 255);
+                    /* font-size: 2rem; */
+                    font-weight: 700;margin: 10px;">Sign {{title}}</h2>
+                </div>
+                <form  [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <div class="col-md-12">
+                    <input style="
+                    background: transparent;
+                    width: 100%;
+                    padding: 1.5rem 1rem 0.5rem;
+                    line-height: 2.5;
+                    padding-top: 1.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 1rem;
+                    margin: 10px;
+                    border-width: 0.0625rem;
+                    /* border-radius: calc(0.25rem - 0.0625rem); */
+                    border-color: #f1e8e8;
+                    border-radius: 4px 4px 4px 4px;
+                    -webkit-border-radius: 4px 4px 4px 4px;
+                    -moz-border-radius: 4px 4px 4px 4px;" type="text" id="username" name="username" placeholder="Email or Mobile number" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                    <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                        <div *ngIf="f['email'].errors['required']">Email is required</div>
+                        <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input style="
+                    background: transparent;
+                    width: 100%;
+                    padding: 1.5rem 1rem 0.5rem;
+                    line-height: 2.5;
+                    padding-top: 1.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 1rem;
+                    margin: 10px;
+                    border-width: 0.0625rem;
+                    /* border-radius: calc(0.25rem - 0.0625rem); */
+                    border-color: #f1e8e8;
+                    border-radius: 4px 4px 4px 4px;
+                    -webkit-border-radius: 4px 4px 4px 4px;
+                    -moz-border-radius: 4px 4px 4px 4px;
+                    " type="text" name="" id="passWord" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+                    <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                        <div *ngIf="f['password'].errors['required']">Password is required</div>
+                        <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
+                    </div>
+                    <div  class="invalid-feedback">{{ error }}</div>
+                </div>
+                <div class="col-md-12">
+                    <button style="background: red;
+                    width: 100%;
+                    line-height: 1.5;
+                    padding-top: 1.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 1rem;
+                    margin: 10px;
+                    border-width: 0.0625rem;
+                    /* border-radius: calc(0.25rem - 0.0625rem); */
+                    color: #fff;
+                    border-color: rgba(0, 0, 0, 0);
+                    border-radius: 4px 4px 4px 4px;
+                    -webkit-border-radius: 4px 4px 4px 4px;
+                    -moz-border-radius: 4px 4px 4px 4px;" type="submit">Sign In</button>
+                </div>
+                </form>
+                <div class="col-md-12">
+                    <p style="margin-block-start: 0;
+                    margin-block-end: 0;
+                    margin: 10px;
+                    padding: 0;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    text-align: center;">OR</p>
+                </div>
+                <div class="col-md-12">
+                    <button style="background: rgb(102, 100, 100);
+                    width: 100%;
+                    line-height: 1.5;
+                    padding-top: 1.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 1rem;
+                    margin: 10px;
+                    border-width: 0.0625rem;
+                    /* border-radius: calc(0.25rem - 0.0625rem); */
+                    color: #fff;
+                    border-color: rgba(0, 0, 0, 0);
+                    border-radius: 4px 4px 4px 4px;
+                    -webkit-border-radius: 4px 4px 4px 4px;
+                    -moz-border-radius: 4px 4px 4px 4px;" type="submit" (click)="onSubmit()">Use a sign in code</button>
+                </div>
+                <div class="col-md-12">
+                    <p style="margin-block-start: 0;
+                    margin-block-end: 0;
+                    margin: 10px;
+                    padding: 0;
+                    color: rgb(255, 255, 255);
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    text-align: center;">Forgot password?</p>
+                </div>
+                <div class="col-md-12">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label style="
+                    color: rgb(255, 255, 255);
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    padding: 10px;" for="vehicle1"> Remember me</label><br>
+                </div>
+                <div class="col-md-12">
+                    <p style="
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    text-align: left;">New to Netflix? <span style="color: rgb(255, 255, 255);
+                    font-size: 1.5rem;
+                    font-weight: 400;"><a (click)="onSignUp()"> Sign up now.</a></span></p>
+                </div>
+                <div class="col-md-12">
+                    <p style="
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 1rem;
+                    top: 20px;
+                    font-weight: 400;
+                    text-align: left;">This page is protected by Google reCAPTCHA to ensure you're not a bot.<span style="color: rgb(6, 71, 250);
+                    font-size: 1rem;
+                    font-weight: 400;"> Learn more</span></p>
+                </div>
+            </div>
+    </div>
+</div>
+
+</div>
+
