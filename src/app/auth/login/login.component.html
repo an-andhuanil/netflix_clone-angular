@@ -65,7 +65,7 @@
                         <div *ngIf="f['password'].errors['required']">Password is required</div>
                         <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
                     </div>
-                    <div  class="invalid-feedback">{{ error }}</div>
+                    <div  class="invalid-feedback" *ngIf="error" style="color: #fff;">{{ error }}</div>
                 </div>
                 <div class="col-md-12">
                     <button style="background: red;
